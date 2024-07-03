@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorCardMainScreen02"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemScreen1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrayLine"
+        android:clickable="true"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/llScreen1TitleOfFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/screen1TitleOfFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/название_фильма"
+                android:textColor="@color/colorLightGray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/screen1TitleOfFilmFromApi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/screen1TitleOfFilm"
+                app:layout_constraintStart_toEndOf="@+id/screen1TitleOfFilm"
+                app:layout_constraintTop_toTopOf="@+id/screen1TitleOfFilm"
+                tools:text="Название фильма" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llScreen1Director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/llScreen1TitleOfFilm"
+            app:layout_constraintStart_toStartOf="@+id/llScreen1TitleOfFilm"
+            app:layout_constraintTop_toBottomOf="@+id/llScreen1TitleOfFilm">
+
+            <TextView
+                android:id="@+id/screen1Director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/режиссёр"
+                android:textColor="@color/colorLightGray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/screen1DirectorFromApi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="Режиссер" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llScreen1Producer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/llScreen1Director"
+            app:layout_constraintStart_toStartOf="@+id/llScreen1Director"
+            app:layout_constraintTop_toBottomOf="@+id/llScreen1Director">
+
+            <TextView
+                android:id="@+id/screen1Producer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/Продюсер"
+                android:textColor="@color/colorLightGray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/screen1ProducerFromApi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="Продюсер" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llScreen1YearOfProduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/llScreen1Producer"
+            app:layout_constraintStart_toStartOf="@+id/llScreen1Producer"
+            app:layout_constraintTop_toBottomOf="@+id/llScreen1Producer">
+
+            <TextView
+                android:id="@+id/screen1YearOfProduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/год_выпуска"
+                android:textColor="@color/colorLightGray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/screen1YearOfProductionFromApi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                tools:text="Год выпуска" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

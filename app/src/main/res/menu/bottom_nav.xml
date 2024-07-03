@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/фильмы"
+        android:id="@+id/screen1Fragment"
+        android:icon="@drawable/icon_label_film_sw"/>
+
+    <item android:title="@string/персонажи"
+        android:id="@+id/screen2Fragment"
+        android:icon="@drawable/icon_person_sw"/>
+
+    <item android:title="@string/миры"
+        android:id="@+id/screen3Fragment"
+        android:icon="@drawable/icon_worlds_sw"/>
+
+</menu>
