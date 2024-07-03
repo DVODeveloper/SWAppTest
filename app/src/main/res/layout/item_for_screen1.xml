@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:clickable="true"
     android:background="@color/colorCardMainScreen02"
     app:cardCornerRadius="16dp"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true"
+    android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/itemScreen1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorGrayLine"
-        android:clickable="true"
         android:padding="10dp">
 
         <LinearLayout

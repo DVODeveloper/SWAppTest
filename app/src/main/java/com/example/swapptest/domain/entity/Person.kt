@@ -1,5 +1,9 @@
 package com.example.swapptest.domain.entity
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Person(
     val name: String? = null,
     val height: Int? = null,
@@ -17,4 +21,4 @@ data class Person(
     val created: String? = null,
     val edited: String? = null,
     val url: String? = null
-)
+): Parcelable

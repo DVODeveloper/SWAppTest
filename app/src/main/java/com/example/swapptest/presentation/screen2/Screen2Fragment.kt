@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.swapptest.data.api.RetrofitInstance
 import com.example.swapptest.databinding.FragmentScreen2Binding
+import com.example.swapptest.domain.entity.Person
 import com.example.swapptest.presentation.rv_adapters.ItemListAdapterForSecondScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -22,12 +23,15 @@ class Screen2Fragment : Fragment() {
     private val binding: FragmentScreen2Binding
         get() = _binding ?: throw RuntimeException("FragmentScreen2Binding == null")
 
+    private lateinit var personResult: Person
+
 
     private val viewModel: Screen2ViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        parseArgs()
         // TODO: Use the ViewModel
     }
 
@@ -40,8 +44,26 @@ class Screen2Fragment : Fragment() {
         return binding.root
     }
 
+    private fun parseArgs() {
+        requireArguments().getParcelable<Person>(KEY1)?.let {
+            personResult = it
+        }
+    }
+
     companion object {
+
+        private const val KEY1 = "PersonsList"
         fun newInstance() = Screen2Fragment()
+
+        fun newInstanceAddPersonsListFromSelectedFilm(personResult: Person): Screen2Fragment {
+            return Screen2Fragment().apply {
+                arguments = Bundle().apply {
+                    putParcelable(KEY1, personResult)
+                }
+            }
+
+        }
+
     }
 
 //    private fun setupAdapter() {

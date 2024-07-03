@@ -1,7 +1,7 @@
 package com.example.swapptest.domain.entity
 
 data class FilmItem(
-    val title: String? = null,
+    val title: String,
     val episode_id: Int? = null,
     val opening_crawl: String? = null,
     val director: String? = null,
