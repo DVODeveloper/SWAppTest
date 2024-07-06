@@ -8,26 +8,26 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.swapptest.R
 import com.example.swapptest.databinding.ItemSelectedCharactersFromFirstScreenBinding
-import com.example.swapptest.domain.entity.Person
+import com.example.swapptest.domain.entity.Character
 
 class ItemListAdapterForSecondScreen :
-    ListAdapter<Person, ItemListAdapterForSecondScreen.Holder>(Comparator()) {
+    ListAdapter<Character, ItemListAdapterForSecondScreen.Holder>(Comparator()) {
     class Holder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val binding = ItemSelectedCharactersFromFirstScreenBinding.bind(view)
-        fun bind(person: Person) = with(binding) {
+        fun bind(person: Character) = with(binding) {
             screen2NameOfPersonFromApi.text = person.name
             screen2MaleFromApi.text = person.gender
             screen2DateOfBornFromApi.text = person.birth_year
         }
     }
 
-    class Comparator : DiffUtil.ItemCallback<Person>() {
-        override fun areItemsTheSame(oldItem: Person, newItem: Person): Boolean {
+    class Comparator : DiffUtil.ItemCallback<Character>() {
+        override fun areItemsTheSame(oldItem: Character, newItem: Character): Boolean {
             return oldItem.name == newItem.name
         }
 
-        override fun areContentsTheSame(oldItem: Person, newItem: Person): Boolean {
+        override fun areContentsTheSame(oldItem: Character, newItem: Character): Boolean {
             return oldItem == newItem
         }
 
